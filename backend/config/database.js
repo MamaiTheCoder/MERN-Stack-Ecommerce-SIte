@@ -7,7 +7,8 @@ const connectDatabase = () => {
       console.log(`MongoDB connected with host ${con.connection.host}`);
     })
     .catch((err) => {
-      console.error(err);
+      console.error(err.message);
+      process.exit();
     });
 };
 
